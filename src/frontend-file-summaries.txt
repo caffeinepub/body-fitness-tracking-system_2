@@ -1,0 +1,21 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router configuration, defining all routes (Home, Dashboard, BMI Calculator, Features, About, Contact, Login, Register) with Layout wrapper and ThemeProvider for dark mode support.",
+  "frontend/src/components/Layout.tsx": "Layout component with responsive navigation bar, mobile menu toggle, dark mode switch, authentication-aware login/logout buttons, and Footer component integration.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying college information (BYK College of Commerce), team members, academic year 2025-26, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/ProtectedRoute.tsx": "Route protection component that redirects unauthenticated users to the login page, used to secure the Dashboard route.",
+  "frontend/src/components/StepCounter.tsx": "Step counter component with manual input field, animated circular progress bar showing progress toward 10,000 daily step goal, and update button to save steps to backend.",
+  "frontend/src/components/WaterIntakeTracker.tsx": "Water intake tracker component with add button (250ml increments), visual glass indicators, progress bar toward 2-liter daily goal, and backend integration.",
+  "frontend/src/components/WeeklyChart.tsx": "Weekly progress chart component displaying last 7 days of fitness data with custom bar chart visualization using gradient progress bars.",
+  "frontend/src/pages/Home.tsx": "Home page with hero section featuring fitness background image, project title by Rajeshwar Chaudhari, feature preview cards, and call-to-action buttons.",
+  "frontend/src/pages/Dashboard.tsx": "User dashboard displaying step counter, water intake tracker, calories burned, BMI summary, weekly progress chart, date picker, and reset functionality with backend integration.",
+  "frontend/src/pages/BMICalculator.tsx": "BMI calculator page with height/weight input fields, calculation using backend method, result display with category (Underweight/Normal/Overweight/Obese), and BMI category reference guide.",
+  "frontend/src/pages/Features.tsx": "Features page listing six system capabilities (Smart Tracking, Health Analytics, BMI Calculator, Goal Setting, Progress Reports, Mobile Responsive Design) with icon cards.",
+  "frontend/src/pages/About.tsx": "About page with project description, problem statement, objectives list, technologies used (React, TypeScript, Tailwind CSS, Motoko), and team member information.",
+  "frontend/src/pages/Contact.tsx": "Contact page with form (name, email, message fields), college contact details for BYK College of Commerce, and project information card.",
+  "frontend/src/pages/Login.tsx": "Login page with username/password form, authentication using localStorage-based useAuth hook, and link to registration page.",
+  "frontend/src/pages/Register.tsx": "Registration page with username/password/confirm password form, validation, localStorage-based user creation, and link to login page.",
+  "frontend/src/hooks/useAuth.ts": "Custom authentication hook managing user registration, login, logout using localStorage for frontend-only authentication system.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including getUserData, getWeeklyData, addWaterIntake, recordDailyData, calculateBMI, and resetDailyData with automatic cache invalidation.",
+  "frontend/src/index.css": "Global styles with Poppins font import, OKLCH color system with fitness theme colors (green, blue, orange, purple), custom utility classes for gradients and cards, and fade-in animation.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Poppins font family, extended border radius, custom shadows, and dark mode class strategy."
+}

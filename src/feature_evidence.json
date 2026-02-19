@@ -1,0 +1,288 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-home-page-with-project-title-body-fitness-tracking-system-by-rajeshwar-chaudhari-a-short-introduction-about-the-system-s-purpose-a-hero-section-with-a-fitness-themed-background-image-a-get-started-button-that-navigates-to-the-dashboard-and-a-navigation-bar-with-links-to-home-dashboard-features-bmi-calculator-about-and-contact-pages",
+      "featureTitle": "Create a Home page with project title 'Body Fitness Tracking System by Rajeshwar Chaudhari', a short introduction about the system's purpose, a hero section with a fitness-themed background image, a 'Get Started' button that navigates to the dashboard, and a navigation bar with links to Home, Dashboard, Features, BMI Calculator, About, and Contact pages",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-footer-to-all-pages-displaying-byk-college-of-commerce-team-members-section-and-the-academic-year-2025-26",
+      "featureTitle": "Add a footer to all pages displaying 'BYK College of Commerce', team members section, and the academic year '2025-26'",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-user-dashboard-page-that-displays-a-step-count-tracker-with-daily-steps-and-progress-bar-a-water-intake-tracker-showing-glasses-per-day-with-an-add-button-calories-burned-display-bmi-result-summary-and-a-weekly-progress-chart-using-chart-js",
+      "featureTitle": "Create a User Dashboard page that displays a step count tracker with daily steps and progress bar, a water intake tracker showing glasses per day with an add button, calories burned display, BMI result summary, and a weekly progress chart using Chart.js",
+      "files": [
+        "frontend/src/components/StepCounter.tsx",
+        "frontend/src/components/WaterIntakeTracker.tsx",
+        "frontend/src/components/WeeklyChart.tsx",
+        "frontend/src/pages/Dashboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-date-selection-option-and-reset-button-to-the-user-dashboard-to-allow-users-to-view-and-reset-their-daily-tracking-data",
+      "featureTitle": "Add date selection option and reset button to the User Dashboard to allow users to view and reset their daily tracking data",
+      "files": [
+        "frontend/src/pages/Dashboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-bmi-calculator-page-with-input-fields-for-height-in-cm-and-weight-in-kg-calculate-bmi-using-the-formula-bmi-weight-height-in-meters-and-display-the-bmi-value-and-category-underweight-normal-overweight-obese-in-a-styled-result-card",
+      "featureTitle": "Create a BMI Calculator page with input fields for height in cm and weight in kg, calculate BMI using the formula BMI = weight / (height in meters)², and display the BMI value and category (Underweight, Normal, Overweight, Obese) in a styled result card",
+      "files": [
+        "frontend/src/pages/BMICalculator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-water-intake-tracker-that-adds-250ml-per-click-shows-a-daily-goal-of-2-liters-and-visualizes-progress-with-a-progress-bar",
+      "featureTitle": "Implement a Water Intake Tracker that adds 250ml per click, shows a daily goal of 2 liters, and visualizes progress with a progress bar",
+      "files": [
+        "frontend/src/components/WaterIntakeTracker.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-step-counter-section-with-a-manual-step-input-field-display-a-daily-goal-of-10-000-steps-and-show-progress-using-an-animated-circular-progress-bar",
+      "featureTitle": "Create a Step Counter section with a manual step input field, display a daily goal of 10,000 steps, and show progress using an animated circular progress bar",
+      "files": [
+        "frontend/src/components/StepCounter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-features-page-listing-the-system-capabilities-smart-tracking-health-analytics-bmi-calculator-goal-setting-progress-reports-and-mobile-responsive-design",
+      "featureTitle": "Create a Features page listing the system capabilities: Smart Tracking, Health Analytics, BMI Calculator, Goal Setting, Progress Reports, and Mobile Responsive Design",
+      "files": [
+        "frontend/src/pages/Features.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-about-page-with-project-description-problem-statement-objectives-a-list-of-technologies-used-html-css-javascript-chart-js-and-a-team-members-section",
+      "featureTitle": "Create an About page with project description, problem statement, objectives, a list of technologies used (HTML, CSS, JavaScript, Chart.js), and a team members section",
+      "files": [
+        "frontend/src/pages/About.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-contact-page-with-a-form-containing-name-email-and-message-input-fields-a-submit-button-and-display-college-contact-details-for-byk-college-of-commerce",
+      "featureTitle": "Create a Contact page with a form containing name, email, and message input fields, a submit button, and display college contact details for BYK College of Commerce",
+      "files": [
+        "frontend/src/pages/Contact.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-responsive-design-ensuring-the-website-works-seamlessly-on-desktop-tablet-and-mobile-devices-using-css-flexbox-and-grid",
+      "featureTitle": "Implement responsive design ensuring the website works seamlessly on desktop, tablet, and mobile devices using CSS Flexbox and Grid",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-fitness-themed-design-style-with-card-based-layout-gradient-buttons-soft-shadows-minimalist-and-professional-aesthetic-fitness-themed-icons-and-use-modern-fonts-like-poppins-or-roboto-from-google-fonts",
+      "featureTitle": "Apply a fitness-themed design style with card-based layout, gradient buttons, soft shadows, minimalist and professional aesthetic, fitness-themed icons, and use modern fonts like Poppins or Roboto from Google Fonts",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-animations-and-hover-effects-to-interactive-elements-throughout-the-website",
+      "featureTitle": "Add basic animations and hover effects to interactive elements throughout the website",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-dark-mode-toggle-that-allows-users-to-switch-between-light-and-dark-themes-across-all-pages",
+      "featureTitle": "Implement a dark mode toggle that allows users to switch between light and dark themes across all pages",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-basic-frontend-only-login-and-register-system-allowing-users-to-create-accounts-and-log-in-no-backend-authentication-required",
+      "featureTitle": "Create a basic frontend-only login and register system allowing users to create accounts and log in (no backend authentication required)",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProtectedRoute.tsx",
+        "frontend/src/hooks/useAuth.ts",
+        "frontend/src/pages/Login.tsx",
+        "frontend/src/pages/Register.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

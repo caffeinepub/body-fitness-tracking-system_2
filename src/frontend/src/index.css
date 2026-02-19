@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        --background: 0.99 0 0;
+        --foreground: 0.15 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.15 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0 0;
+        --primary: 0.25 0 0;
+        --primary-foreground: 0.99 0 0;
+        --secondary: 0.96 0 0;
+        --secondary-foreground: 0.25 0 0;
+        --muted: 0.96 0 0;
+        --muted-foreground: 0.50 0 0;
+        --accent: 0.96 0 0;
+        --accent-foreground: 0.25 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.99 0 0;
+        --border: 0.90 0 0;
+        --input: 0.90 0 0;
+        --ring: 0.70 0 0;
+        --chart-1: 0.65 0.20 145;
+        --chart-2: 0.60 0.18 220;
+        --chart-3: 0.55 0.15 30;
+        --chart-4: 0.70 0.22 280;
+        --chart-5: 0.75 0.20 60;
+        
+        /* Fitness theme colors */
+        --fitness-green: 0.65 0.20 145;
+        --fitness-blue: 0.60 0.18 220;
+        --fitness-orange: 0.70 0.22 40;
+        --fitness-purple: 0.60 0.20 280;
+    }
+
+    .dark {
+        --background: 0.15 0 0;
+        --foreground: 0.98 0 0;
+        --card: 0.20 0 0;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.18 0 0;
+        --popover-foreground: 0.98 0 0;
+        --primary: 0.90 0 0;
+        --primary-foreground: 0.20 0 0;
+        --secondary: 0.25 0 0;
+        --secondary-foreground: 0.98 0 0;
+        --muted: 0.25 0 0;
+        --muted-foreground: 0.65 0 0;
+        --accent: 0.30 0 0;
+        --accent-foreground: 0.98 0 0;
+        --destructive: 0.65 0.22 27;
+        --destructive-foreground: 0.20 0 0;
+        --border: 0.30 0 0;
+        --input: 0.30 0 0;
+        --ring: 0.50 0 0;
+        --chart-1: 0.65 0.20 145;
+        --chart-2: 0.60 0.18 220;
+        --chart-3: 0.70 0.22 40;
+        --chart-4: 0.60 0.20 280;
+        --chart-5: 0.75 0.20 60;
+        
+        /* Fitness theme colors - same in dark mode */
+        --fitness-green: 0.70 0.22 145;
+        --fitness-blue: 0.65 0.20 220;
+        --fitness-orange: 0.75 0.24 40;
+        --fitness-purple: 0.65 0.22 280;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    }
+}
+
+@layer utilities {
+    .fitness-gradient {
+        @apply bg-gradient-to-r from-[oklch(var(--fitness-green))] to-[oklch(var(--fitness-blue))] text-white hover:opacity-90 transition-opacity;
+    }
+    
+    .fitness-card {
+        @apply bg-card border shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl;
+    }
+    
+    .text-fitness-green {
+        color: oklch(var(--fitness-green));
+    }
+    
+    .text-fitness-blue {
+        color: oklch(var(--fitness-blue));
+    }
+    
+    .text-fitness-orange {
+        color: oklch(var(--fitness-orange));
+    }
+    
+    .text-fitness-purple {
+        color: oklch(var(--fitness-purple));
+    }
+    
+    .bg-fitness-green {
+        background-color: oklch(var(--fitness-green));
+    }
+    
+    .bg-fitness-blue {
+        background-color: oklch(var(--fitness-blue));
+    }
+    
+    .bg-fitness-orange {
+        background-color: oklch(var(--fitness-orange));
+    }
+    
+    .bg-fitness-purple {
+        background-color: oklch(var(--fitness-purple));
+    }
+    
+    .border-fitness-green {
+        border-color: oklch(var(--fitness-green));
+    }
+    
+    .border-fitness-blue {
+        border-color: oklch(var(--fitness-blue));
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

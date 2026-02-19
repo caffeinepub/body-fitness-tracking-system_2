@@ -1,0 +1,341 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Body Fitness Tracking System Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create Home page with hero section, navigation, and project branding",
+      "acceptanceCriteria": [
+        "Home page displays the project title prominently",
+        "Hero section includes a fitness-themed background image",
+        "Get Started button is visible and functional",
+        "Navigation bar contains all six links and is visible on all pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Configure React Router with routes for Home, Dashboard, Features, BMI Calculator, About, and Contact pages. Add routing logic to navigate between pages."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout component with navigation bar containing links to Home, Dashboard, Features, BMI Calculator, About, and Contact. Include dark mode toggle in navigation. Use Tailwind CSS for responsive styling."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "create",
+          "description": "Create Home page displaying 'Body Fitness Tracking System by Rajeshwar Chaudhari' as the project title. Add hero section with fitness-themed background using the generated image at frontend/public/assets/generated/hero-fitness.dim_1920x800.png. Include 'Get Started' button that navigates to /dashboard. Use Tailwind CSS with gradient buttons and card-based layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add footer with college branding and team information",
+      "acceptanceCriteria": [
+        "Footer appears on all pages",
+        "Footer displays 'BYK College of Commerce'",
+        "Footer includes team members section",
+        "Footer shows '2025-26' academic year"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create Footer component displaying 'BYK College of Commerce', team members section, and academic year '2025-26'. Use Tailwind CSS for styling with soft shadows and professional appearance."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Import and include Footer component in the layout so it appears on all pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create User Dashboard with fitness tracking metrics and weekly chart",
+      "acceptanceCriteria": [
+        "Dashboard displays step count with visual progress bar",
+        "Water intake tracker shows glasses consumed with functional add button",
+        "Calories burned metric is displayed",
+        "BMI summary is shown on the dashboard",
+        "Weekly progress chart renders using Chart.js library"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Dashboard.tsx",
+          "operation": "create",
+          "description": "Create Dashboard page displaying step count tracker with progress bar, water intake tracker with add button (250ml increments), calories burned display, BMI result summary, and weekly progress chart. Use backend methods getUserData() and getWeeklyData() to fetch data. Use React-compatible charting solution or custom SVG charts (not Chart.js per constraints). Use generated icons: frontend/public/assets/generated/icon-steps.dim_128x128.png, frontend/public/assets/generated/icon-water.dim_128x128.png, frontend/public/assets/generated/icon-calories.dim_128x128.png, frontend/public/assets/generated/icon-bmi.dim_128x128.png. Apply card-based layout with Tailwind CSS."
+        },
+        {
+          "path": "frontend/src/components/StepCounter.tsx",
+          "operation": "create",
+          "description": "Create StepCounter component displaying daily steps with progress bar visualization. Accept steps data as props and show progress toward 10,000 step goal. Use Tailwind CSS for styling."
+        },
+        {
+          "path": "frontend/src/components/WaterIntakeTracker.tsx",
+          "operation": "create",
+          "description": "Create WaterIntakeTracker component with add button to increment water intake by 250ml. Display progress toward 2-liter daily goal with progress bar. Call backend addWaterIntake() method when button is clicked. Use Tailwind CSS for styling."
+        },
+        {
+          "path": "frontend/src/components/WeeklyChart.tsx",
+          "operation": "create",
+          "description": "Create WeeklyChart component to visualize weekly fitness data using React-compatible charting solution or custom SVG implementation (not Chart.js). Accept weekly data array as props and render line or bar chart showing progress over time. Use Tailwind CSS for styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add date selection and reset functionality to Dashboard",
+      "acceptanceCriteria": [
+        "Date picker allows selection of different dates",
+        "Reset button clears all daily tracking data",
+        "Data persists correctly when switching between dates"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Dashboard.tsx",
+          "operation": "modify",
+          "description": "Add date picker input for selecting dates and reset button. Wire reset button to call backend resetDailyData() method. Implement date-based data filtering using getUserData() results. Use Tailwind CSS for date picker and button styling with gradient effects."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create BMI Calculator with formula-based calculation and result display",
+      "acceptanceCriteria": [
+        "Input fields accept height in cm and weight in kg",
+        "BMI calculation uses the correct formula",
+        "Result displays accurate BMI value",
+        "Result shows correct category based on BMI ranges",
+        "Result is presented in a visually styled card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BMICalculator.tsx",
+          "operation": "create",
+          "description": "Create BMI Calculator page with input fields for height (cm) and weight (kg). Add calculate button that calls backend calculateAndStoreBMI() method. Display BMI value and category (Underweight, Normal, Overweight, Obese) in a styled result card. Use Tailwind CSS with card-based layout, gradient buttons, and soft shadows."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement Water Intake Tracker with 250ml increments and progress visualization",
+      "acceptanceCriteria": [
+        "Each click adds exactly 250ml to water intake",
+        "Daily goal is set to 2 liters (2000ml)",
+        "Progress bar visually represents percentage toward goal",
+        "Progress bar updates in real-time after each click"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/WaterIntakeTracker.tsx",
+          "operation": "modify",
+          "description": "Ensure add button increments water intake by exactly 250ml per click. Set daily goal to 2000ml (2 liters). Update progress bar to show percentage calculation (current intake / 2000ml * 100%). Ensure real-time progress bar updates after each click using React state management."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create Step Counter with manual input and animated circular progress",
+      "acceptanceCriteria": [
+        "Input field allows manual entry of step count",
+        "Daily goal displays as 10,000 steps",
+        "Circular progress bar animates to show progress percentage",
+        "Progress bar updates when step count changes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StepCounter.tsx",
+          "operation": "modify",
+          "description": "Add manual step input field for users to enter step count. Display daily goal as 10,000 steps. Implement animated circular progress bar using SVG or CSS animations to show progress percentage. Update progress when step count changes. Use Tailwind CSS for styling with animations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create Features page listing system capabilities",
+      "acceptanceCriteria": [
+        "Features page displays all six feature items",
+        "Each feature has a clear title and description",
+        "Page layout is visually consistent with overall design"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Features.tsx",
+          "operation": "create",
+          "description": "Create Features page listing six capabilities: Smart Tracking, Health Analytics, BMI Calculator, Goal Setting, Progress Reports, and Mobile Responsive Design. Display each feature with title and description in card-based layout. Use Tailwind CSS with gradient effects, soft shadows, and fitness-themed icons."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create About page with project information and team details",
+      "acceptanceCriteria": [
+        "About page includes a project description section",
+        "Problem statement is clearly stated",
+        "Objectives are listed",
+        "Technologies section mentions HTML, CSS, JavaScript, and Chart.js",
+        "Team members section is present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/About.tsx",
+          "operation": "create",
+          "description": "Create About page with sections for project description, problem statement, objectives, technologies used (mention React, TypeScript, Tailwind CSS, and charting solution used), and team members. Use card-based layout with Tailwind CSS styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Create Contact page with form and college details",
+      "acceptanceCriteria": [
+        "Contact form includes name, email, and message fields",
+        "Submit button is functional",
+        "College contact details are displayed on the page",
+        "Form validates required fields before submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Contact.tsx",
+          "operation": "create",
+          "description": "Create Contact page with form containing name, email, and message input fields. Add submit button with form validation for required fields. Display BYK College of Commerce contact details. Use Tailwind CSS with gradient buttons and card-based form layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Implement responsive design for all screen sizes",
+      "acceptanceCriteria": [
+        "Layout adapts to different screen sizes",
+        "All functionality works on mobile devices",
+        "Navigation is mobile-friendly",
+        "Content is readable on all screen sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add responsive navigation with mobile menu toggle for smaller screens. Use Tailwind CSS responsive utilities (sm:, md:, lg:, xl:) to ensure navigation is mobile-friendly and adapts to different screen sizes."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add responsive typography and spacing rules using Tailwind CSS utilities. Ensure content is readable on all screen sizes with appropriate breakpoints and fluid layouts."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Apply fitness-themed design with modern styling",
+      "acceptanceCriteria": [
+        "Design uses card-based components throughout",
+        "Buttons have gradient styling",
+        "Soft shadows are applied to cards and elements",
+        "Fitness-themed icons are used appropriately",
+        "Typography uses Poppins or Roboto font family",
+        "Overall aesthetic is minimalist and professional"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Import Google Fonts Poppins or Roboto. Define custom Tailwind CSS utilities for gradient buttons, soft shadows on cards, and fitness color palette. Set base typography to use Poppins or Roboto font family. Create minimalist and professional design tokens."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration with custom gradient colors for buttons, shadow utilities for cards, and font family settings for Poppins or Roboto. Add fitness-themed color palette (vibrant greens, blues, oranges)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Add animations and hover effects to interactive elements",
+      "acceptanceCriteria": [
+        "Buttons have hover effects",
+        "Cards have subtle animations on interaction",
+        "Transitions are smooth and professional",
+        "Animations enhance user experience without being distracting"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS transition utilities for hover effects on buttons and cards. Define animation keyframes for subtle card interactions. Use Tailwind CSS transition and transform utilities for smooth, professional animations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Implement dark mode toggle with theme persistence",
+      "acceptanceCriteria": [
+        "Toggle switch is visible on all pages",
+        "Theme preference persists across sessions",
+        "All pages adapt to dark mode styling",
+        "Text remains readable in both modes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useDarkMode.ts",
+          "operation": "create",
+          "description": "Create custom hook for dark mode state management. Store theme preference in localStorage for persistence across sessions. Return current theme and toggle function."
+        },
+        {
+          "path": "frontend/src/components/DarkModeToggle.tsx",
+          "operation": "create",
+          "description": "Create DarkModeToggle component with switch UI. Use useDarkMode hook to manage theme state. Style with Tailwind CSS for smooth toggle animation."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Import and include DarkModeToggle component in navigation bar so it appears on all pages. Apply dark mode classes to layout based on theme state."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Enable Tailwind CSS dark mode with 'class' strategy. Define dark mode color variants for all components ensuring text readability in both themes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Create frontend-only login and register system",
+      "acceptanceCriteria": [
+        "Registration form collects username and password",
+        "Login form authenticates against stored credentials",
+        "User credentials are stored in local storage",
+        "Login state persists across sessions",
+        "Dashboard is only accessible after login"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Login.tsx",
+          "operation": "create",
+          "description": "Create Login page with form containing username and password fields. Validate credentials against localStorage. Set login state and redirect to Dashboard on success. Use Tailwind CSS with gradient buttons and card-based form layout."
+        },
+        {
+          "path": "frontend/src/pages/Register.tsx",
+          "operation": "create",
+          "description": "Create Register page with form collecting username and password. Store credentials in localStorage. Redirect to Login page after successful registration. Use Tailwind CSS with gradient buttons and card-based form layout."
+        },
+        {
+          "path": "frontend/src/hooks/useAuth.ts",
+          "operation": "create",
+          "description": "Create custom hook for authentication state management. Handle login, logout, and registration logic. Store and retrieve user credentials from localStorage. Return authentication state and methods."
+        },
+        {
+          "path": "frontend/src/components/ProtectedRoute.tsx",
+          "operation": "create",
+          "description": "Create ProtectedRoute component that wraps Dashboard and other protected pages. Check authentication state using useAuth hook. Redirect to Login page if user is not authenticated. Allow access if authenticated."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add routes for Login and Register pages. Wrap Dashboard route with ProtectedRoute component to restrict access to authenticated users only. Add navigation links to Login/Register in navigation bar when user is not logged in."
+        }
+      ]
+    }
+  ]
+}

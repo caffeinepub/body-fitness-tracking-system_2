@@ -1,0 +1,377 @@
+{
+  "kind": "build_request",
+  "title": "Build Body Fitness Tracking System website",
+  "projectName": "Body Fitness Tracker",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a Home page with project title 'Body Fitness Tracking System by Rajeshwar Chaudhari', a short introduction about the system's purpose, a hero section with a fitness-themed background image, a 'Get Started' button that navigates to the dashboard, and a navigation bar with links to Home, Dashboard, Features, BMI Calculator, About, and Contact pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Project Title: Body Fitness Tracking System by Rajeshwar Chaudhari",
+          "Hero section with fitness-themed background",
+          "Navigation bar (Home, Dashboard, Features, BMI Calculator, About, Contact)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page displays the project title prominently",
+        "Hero section includes a fitness-themed background image",
+        "Get Started button is visible and functional",
+        "Navigation bar contains all six links and is visible on all pages"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a footer to all pages displaying 'BYK College of Commerce', team members section, and the academic year '2025-26'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Footer with college name byk college of commerce, team members, and year-2025-26"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer appears on all pages",
+        "Footer displays 'BYK College of Commerce'",
+        "Footer includes team members section",
+        "Footer shows '2025-26' academic year"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a User Dashboard page that displays a step count tracker with daily steps and progress bar, a water intake tracker showing glasses per day with an add button, calories burned display, BMI result summary, and a weekly progress chart using Chart.js",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "👣 Step Count Tracker (daily steps with progress bar)",
+          "💧 Water Intake Tracker (glasses per day with add button)",
+          "🔥 Calories Burned",
+          "🧍 BMI Result Summary",
+          "📊 Weekly Progress Chart (use chart library like Chart.js)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard displays step count with visual progress bar",
+        "Water intake tracker shows glasses consumed with functional add button",
+        "Calories burned metric is displayed",
+        "BMI summary is shown on the dashboard",
+        "Weekly progress chart renders using Chart.js library"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add date selection option and reset button to the User Dashboard to allow users to view and reset their daily tracking data",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Date selection option",
+          "Reset button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Date picker allows selection of different dates",
+        "Reset button clears all daily tracking data",
+        "Data persists correctly when switching between dates"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a BMI Calculator page with input fields for height in cm and weight in kg, calculate BMI using the formula BMI = weight / (height in meters)², and display the BMI value and category (Underweight, Normal, Overweight, Obese) in a styled result card",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Height (cm)",
+          "Weight (kg)",
+          "BMI = weight / (height in meters²)",
+          "BMI value",
+          "Category (Underweight, Normal, Overweight, Obese)",
+          "Styled result card"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Input fields accept height in cm and weight in kg",
+        "BMI calculation uses the correct formula",
+        "Result displays accurate BMI value",
+        "Result shows correct category based on BMI ranges",
+        "Result is presented in a visually styled card"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a Water Intake Tracker that adds 250ml per click, shows a daily goal of 2 liters, and visualizes progress with a progress bar",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add water intake (250ml per click)",
+          "Show daily goal (e.g., 2 liters)",
+          "Progress bar visualization"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each click adds exactly 250ml to water intake",
+        "Daily goal is set to 2 liters (2000ml)",
+        "Progress bar visually represents percentage toward goal",
+        "Progress bar updates in real-time after each click"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a Step Counter section with a manual step input field, display a daily goal of 10,000 steps, and show progress using an animated circular progress bar",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Manual step input field",
+          "Show daily goal (e.g., 10,000 steps)",
+          "Animated circular progress bar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Input field allows manual entry of step count",
+        "Daily goal displays as 10,000 steps",
+        "Circular progress bar animates to show progress percentage",
+        "Progress bar updates when step count changes"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create a Features page listing the system capabilities: Smart Tracking, Health Analytics, BMI Calculator, Goal Setting, Progress Reports, and Mobile Responsive Design",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Smart Tracking",
+          "Health Analytics",
+          "BMI Calculator",
+          "Goal Setting",
+          "Progress Reports",
+          "Mobile Responsive Design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Features page displays all six feature items",
+        "Each feature has a clear title and description",
+        "Page layout is visually consistent with overall design"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create an About page with project description, problem statement, objectives, a list of technologies used (HTML, CSS, JavaScript, Chart.js), and a team members section",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Project Description",
+          "Problem Statement",
+          "Objectives",
+          "Technologies Used (HTML, CSS, JavaScript, Chart.js)",
+          "Team Members section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page includes a project description section",
+        "Problem statement is clearly stated",
+        "Objectives are listed",
+        "Technologies section mentions HTML, CSS, JavaScript, and Chart.js",
+        "Team members section is present"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create a Contact page with a form containing name, email, and message input fields, a submit button, and display college contact details for BYK College of Commerce",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Name",
+          "Email",
+          "Message",
+          "Submit button",
+          "College contact details"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact form includes name, email, and message fields",
+        "Submit button is functional",
+        "College contact details are displayed on the page",
+        "Form validates required fields before submission"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Implement local storage to persist all user tracking data including steps, water intake, calories, and BMI calculations across browser sessions",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Store user data using Local Storage",
+          "Data persistence using local storage"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All tracking data is saved to local storage",
+        "Data persists after page refresh",
+        "Data persists after browser restart",
+        "User can continue tracking from where they left off"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Implement responsive design ensuring the website works seamlessly on desktop, tablet, and mobile devices using CSS Flexbox and Grid",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Responsive Design",
+          "CSS3 (Flexbox/Grid)",
+          "Mobile Responsive Design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Layout adapts to different screen sizes",
+        "All functionality works on mobile devices",
+        "Navigation is mobile-friendly",
+        "Content is readable on all screen sizes"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Apply a fitness-themed design style with card-based layout, gradient buttons, soft shadows, minimalist and professional aesthetic, fitness-themed icons, and use modern fonts like Poppins or Roboto from Google Fonts",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Fitness-themed icons",
+          "Card-based layout",
+          "Gradient buttons",
+          "Soft shadows",
+          "Minimalist and professional",
+          "Use modern fonts (like Google Fonts – Poppins or Roboto)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Design uses card-based components throughout",
+        "Buttons have gradient styling",
+        "Soft shadows are applied to cards and elements",
+        "Fitness-themed icons are used appropriately",
+        "Typography uses Poppins or Roboto font family",
+        "Overall aesthetic is minimalist and professional"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Add basic animations and hover effects to interactive elements throughout the website",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Include basic animations and hover effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Buttons have hover effects",
+        "Cards have subtle animations on interaction",
+        "Transitions are smooth and professional",
+        "Animations enhance user experience without being distracting"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement a dark mode toggle that allows users to switch between light and dark themes across all pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Dark Mode toggle"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Toggle switch is visible on all pages",
+        "Theme preference persists across sessions",
+        "All pages adapt to dark mode styling",
+        "Text remains readable in both modes"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Create a basic frontend-only login and register system allowing users to create accounts and log in (no backend authentication required)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Login/Register system (basic frontend only)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Registration form collects username and password",
+        "Login form authenticates against stored credentials",
+        "User credentials are stored in local storage",
+        "Login state persists across sessions",
+        "Dashboard is only accessible after login"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use only React with TypeScript for frontend implementation, not plain HTML/CSS/JavaScript",
+    "Do not integrate external Chart.js library; use React-compatible charting solution or custom SVG charts",
+    "Store all data in backend Motoko actor, not browser local storage",
+    "Use Tailwind CSS for styling instead of plain CSS3"
+  ],
+  "nonGoals": [
+    "Backend database connectivity beyond Motoko actor storage",
+    "PDF report generation",
+    "Real authentication with password hashing or external auth providers",
+    "Integration with actual fitness tracking devices or APIs",
+    "Email functionality for contact form",
+    "Multi-user authentication system"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Fitness-themed hero background showing a person exercising or gym equipment, vibrant and motivational (hero-fitness.dim_1920x800.png)",
+      "Small step counter icon illustration in a circular design (icon-steps.dim_128x128.png)",
+      "Small water droplet icon illustration in a circular design (icon-water.dim_128x128.png)",
+      "Small flame icon illustration for calories in a circular design (icon-calories.dim_128x128.png)",
+      "Small body measurement icon illustration for BMI in a circular design (icon-bmi.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}
